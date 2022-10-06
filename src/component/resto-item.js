@@ -13,7 +13,7 @@ class RestoItem extends HTMLElement {
             <a class='resto-item' href='#'>
                 <div class='card-resto'>    
                     <div class='card-img'>
-                        <div class='rating-label'>
+                        <div class='rating-label'> 
                             ${this._data.rating}
                         </div>
                         <img alt='${this._data.name}' src='${this._data.pictureId}'/>
