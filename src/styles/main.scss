@@ -258,6 +258,11 @@ nav {
       margin-top: 15px;
     }
 
+    .btn-outline-white:focus{
+      background: #fff;
+      color: $gray-100;
+    }
+
     h1{
       font-size: 5em;
     }
