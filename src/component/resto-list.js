@@ -9,7 +9,7 @@ class RestoList extends HTMLElement{
         this.innerHTML = ``;
         const listResto = restoData.restaurants; 
         this.classList.add('list-resto');
-        listResto.forEach((data, index) => {
+        listResto.forEach((data) => {
             const restoItemEl = document.createElement('resto-item');
             restoItemEl.restoItem = data;
             this.appendChild(restoItemEl);

@@ -1,13 +1,15 @@
 class RestoItem extends HTMLElement {
-    set restoItem(data) {
-        this._data = data;
-        this.render();
-    }
-    connectedCallback() {
-        this.render();
-    }
-    render() {
-        this.innerHTML = `
+  set restoItem(data) {
+    this._data = data;
+    this.render();
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.innerHTML = `
             <a class='resto-item' href='#'>
                 <div class='card-resto'>    
                     <div class='card-img'>
@@ -24,7 +26,7 @@ class RestoItem extends HTMLElement {
                 </div>
             </a>
         `;
-    }
+  }
 }
 
 customElements.define('resto-item', RestoItem);

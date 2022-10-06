@@ -1,9 +1,10 @@
-class AppBar extends HTMLElement{
-    connectedCallback(){
-        this.render();
-    }
-    render(){
-        this.innerHTML = `
+class AppBar extends HTMLElement {
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.innerHTML = `
         <header>
             <div class="container">
                 <div class='header-content'>
@@ -19,7 +20,7 @@ class AppBar extends HTMLElement{
                 </nav>            
             </div>
         </header>
-        `
-    }
+        `;
+  }
 }
 customElements.define('app-bar', AppBar);
