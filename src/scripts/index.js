@@ -6,10 +6,8 @@ import '../styles/main.scss';
 
 const hamburgerBtnEl = document.querySelector('#hamburger');
 const navbarEl = document.querySelector('#navbar');
-console.log('Cek navbarEl: ', navbarEl);
 
 hamburgerBtnEl.addEventListener('click', event =>{
-    console.log('Cek eventnya jalan belom');
     navbarEl.classList.toggle('open');
     event.stopPropagation();
 });

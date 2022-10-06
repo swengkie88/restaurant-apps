@@ -4,7 +4,6 @@ class RestoItem extends HTMLElement {
         this.render();
     }
     connectedCallback() {
-        console.log('Resto item udah diload');
         this.render();
     }
     render() {
