@@ -8,7 +8,7 @@ class AppBar extends HTMLElement{
             <div class="container">
                 <div class='header-content'>
                     <a href="/" class="logo">O<span class="highlight-text">maem</span></a>
-                    <a id="hamburger" href="#">☰</a>
+                    <button id="hamburger" type="button">☰</button>
                 </div>
                 <nav id="navbar"> 
                         <ul> 
