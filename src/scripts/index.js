@@ -1,13 +1,20 @@
 import 'regenerator-runtime'; /* for async await transpile */
-import '../component/app-bar.js';
-import '../component/hero.js';
-import '../component/resto-list.js';
 import '../styles/main.scss';
+import '../styles/responsive.scss';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
-const hamburgerBtnEl = document.querySelector('#hamburger');
-const navbarEl = document.querySelector('#navbar');
+const app = new App({
+  button: document.querySelector('#hamburger'),
+  navbar: document.querySelector('#navbar'),
+  content: document.querySelector('#main-content'),
+});
 
-hamburgerBtnEl.addEventListener('click', (event) => {
-  navbarEl.classList.toggle('open');
-  event.stopPropagation();
+window.addEventListener('hashchange', () => {
+  app.renderApp();
+});
+
+window.addEventListener('load', async () => {
+  app.renderApp();
+  await swRegister();
 });

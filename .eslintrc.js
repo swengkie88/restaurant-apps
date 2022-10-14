@@ -11,5 +11,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'no-console': 'off',
+    'no-underscore-dangle': 'off',
+    'no-restricted-globals': 'off',
   },
 };

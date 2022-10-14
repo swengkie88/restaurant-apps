@@ -1,0 +1,159 @@
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .list-resto {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .list-resto {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-body {
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .card-resto.detail-card {
+        .card-img {
+            img {
+                top: -50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    main>.container {
+        padding: 0;
+    }
+
+    .content-header {
+        text-align: center;
+        padding: 40px 20px 0 20px;
+
+        p {
+            padding: 0 1rem;
+        }
+    }
+
+    header {
+        padding: 0;
+        text-align: center;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    #navbar.open {
+        display: block;
+    }
+
+    header {
+        .logo {
+            padding: 1rem 0;
+        }
+
+        .container {
+            flex-direction: column;
+
+            .header-content {
+                width: 100%;
+            }
+        }
+    }
+
+    nav {
+
+
+        ul {
+            text-align: center;
+            flex-direction: column;
+
+            li {
+                padding: 1rem;
+            }
+        }
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .hero-el .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .hero-el .hero-content p {
+        font-size: 1.1em;
+        padding: 1rem 2.5rem;
+    }
+
+    .list-resto {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .card-resto {
+        padding: 1rem;
+
+        .card-body {
+            .resto-info {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .card-resto.detail-card {
+        .card-img {
+            img {
+                position: relative;
+                top: 0;
+                left: -100px;
+                height: 100%;
+                width: auto;
+            }
+        }
+        .card-body{
+            flex-direction: column;
+
+            .resto-content {
+                flex-basis: 100%;
+            }
+        
+            .resto-menu {
+                flex-basis: 100%;
+            }
+        }
+       
+    }
+
+    #customer-review {
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 10% 5%;
+
+        h2 {
+            font-size: 3.5em;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 3%;
+        }
+    }
+}
