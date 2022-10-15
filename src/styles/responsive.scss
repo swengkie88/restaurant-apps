@@ -101,7 +101,7 @@
     }
 
     .list-resto {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         gap: 0;
     }
 
@@ -154,6 +154,16 @@
         p {
             font-size: 1em;
             margin-bottom: 3%;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card-resto {
+        .card-body {
+            p{
+                width: 100%;
+            }
         }
     }
 }
