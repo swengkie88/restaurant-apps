@@ -1,26 +1,18 @@
 import FavoriteRestoIdb from '../../data/resto-favorite-idb';
-import { createRestoItemView } from '../builder/view-builder';
+import FavoriteRestoSearchView from './liked-movies/favorite-resto-search-view';
+import FavoriteRestoShowPresenter from './liked-movies/favorite-resto-show-presenter';
+import FavoriteRestoSearchPresenter from './liked-movies/favorite-resto-search-presenter';
+// import { createRestoItemView } from '../builder/view-builder';
+
+const view = new FavoriteRestoSearchView();
 
 const Favorite = {
   async render() {
-    return `
-    <div class="container">
-      <div class="content-header">
-        <h2 id="explore">Resto Favorit Anda</h2>
-        <p>
-          Berikut daftar Restoran yang anda sukai!
-        </p>
-      </div>
-      <div id="favorites" class="list-resto"></div>
-    </div>
-    `;
+    return view.getTemplate();
   },
   async afterRender() {
-    const favsResto = await FavoriteRestoIdb.getAllResto();
-    const favsContainer = document.querySelector('#favorites');
-    favsResto.forEach((resto) => {
-      favsContainer.innerHTML += createRestoItemView(resto);
-    });
+    new FavoriteRestoShowPresenter({ view, favoriteResto: FavoriteRestoIdb });
+    new FavoriteRestoSearchPresenter({ view, favoriteResto: FavoriteRestoIdb })
   },
 };
 

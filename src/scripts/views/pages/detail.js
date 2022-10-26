@@ -2,6 +2,7 @@ import RestoDataSource from '../../data/resto-datasource';
 import UrlParser from '../../routes/url-parser';
 import { createRestoDetailView } from '../builder/view-builder';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
+import FavoriteRestoIdb from '../../data/resto-favorite-idb';
 
 const Detail = {
   async render() {
@@ -40,7 +41,6 @@ const Detail = {
       categoryEl.innerHTML += `<div class='category-chips'>${categoryItem.name}</div>`;
     });
 
-    // eslint-disable-next-line prefer-destructuring
     const customerReviews = resto.customerReviews;
     const customerReviewEl = document.querySelector('#customer-review');
 
@@ -57,6 +57,7 @@ const Detail = {
     // Menggunakan object LikeButtonInitiator
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      favoriteResto: FavoriteRestoIdb,
       resto: {
         id: resto.id,
         name: resto.name,

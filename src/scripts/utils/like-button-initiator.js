@@ -2,9 +2,10 @@ import FavoriteRestoIdb from '../data/resto-favorite-idb';
 import { createLikeButtonView, createLikedButtonView } from '../views/builder/view-builder';
 
 const LikeButtonInitiator = {
-  async init({ likeButtonContainer, resto }) {
+  async init({ likeButtonContainer, resto, favoriteResto }) {
     this._likeButtonContainer = likeButtonContainer;
     this._resto = resto;
+    this._favoriteResto = favoriteResto;
 
     await this._renderButton();
   },
