@@ -1,7 +1,7 @@
 import FavoriteRestoIdb from '../../data/resto-favorite-idb';
-import FavoriteRestoSearchView from './liked-movies/favorite-resto-search-view';
-import FavoriteRestoShowPresenter from './liked-movies/favorite-resto-show-presenter';
-import FavoriteRestoSearchPresenter from './liked-movies/favorite-resto-search-presenter';
+import FavoriteRestoSearchView from './liked-resto/favorite-resto-search-view';
+import FavoriteRestoShowPresenter from './liked-resto/favorite-resto-show-presenter';
+import FavoriteRestoSearchPresenter from './liked-resto/favorite-resto-search-presenter';
 // import { createRestoItemView } from '../builder/view-builder';
 
 const view = new FavoriteRestoSearchView();

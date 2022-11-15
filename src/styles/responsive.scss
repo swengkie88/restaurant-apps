@@ -11,6 +11,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .hero-el {
+        background: url('../public/images/heros/hero-image_4-large.jpg') no-repeat fixed;
+        background-size: cover;
+    }
     .list-resto {
         grid-template-columns: 1fr 1fr;
     }
@@ -30,6 +34,10 @@
 }
 
 @media screen and (max-width: 576px) {
+    .hero-el {
+        background: url('../public/images/heros/hero-image_4-small.jpg') no-repeat fixed;
+        background-size: cover;
+    }
     main>.container {
         padding: 0;
     }

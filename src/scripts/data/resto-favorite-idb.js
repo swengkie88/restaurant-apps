@@ -37,8 +37,6 @@ const FavoriteRestoIdb = {
       const loweredCaseQuery = query.toLowerCase();
       const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
 
-      console.log('Apakah searchResto dieksekusi: ', query);
-
       return jammedRestoTitle.indexOf(jammedQuery) !== -1;
     });
   },

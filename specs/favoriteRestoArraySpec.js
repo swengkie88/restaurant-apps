@@ -38,7 +38,7 @@ const FavoriteRestoArray = {
   searchResto(query) {
     return this.getAllResto()
       .filter((resto) => {
-        const loweredCaseRestoTitle = (resto.title || '-').toLowerCase();
+        const loweredCaseRestoTitle = (resto.name || '-').toLowerCase();
         const jammedRestoTitle = loweredCaseRestoTitle.replace(/\s/g, '');
 
         const loweredCaseQuery = query.toLowerCase();

@@ -66,9 +66,9 @@ const itActsAsFavoriteRestoModel = (favoriteResto) => {
     favoriteResto.putResto({ id: 4, name: 'ini mah resto abcd' });
 
     expect(await favoriteResto.searchResto('resto a')).toEqual([
-      { id: 1, title: 'resto a' },
-      { id: 3, title: 'resto abc' },
-      { id: 4, title: 'ini mah resto abcd' },
+      { id: 1, name: 'resto a' },
+      { id: 3, name: 'resto abc' },
+      { id: 4, name: 'ini mah resto abcd' },
     ]);
   });
 };

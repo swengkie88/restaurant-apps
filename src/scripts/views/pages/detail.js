@@ -1,8 +1,8 @@
 import RestoDataSource from '../../data/resto-datasource';
 import UrlParser from '../../routes/url-parser';
 import { createRestoDetailView } from '../builder/view-builder';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
 import FavoriteRestoIdb from '../../data/resto-favorite-idb';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 
 const Detail = {
   async render() {
@@ -55,7 +55,7 @@ const Detail = {
     });
 
     // Menggunakan object LikeButtonInitiator
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       favoriteResto: FavoriteRestoIdb,
       resto: {

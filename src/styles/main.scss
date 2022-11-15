@@ -247,7 +247,7 @@ main {
 }
 
 .resto-item:hover {
-  h3 {
+  h3 a {
     color: $accent-color !important;
   }
 
@@ -316,9 +316,12 @@ main {
     h3 {
       font-size: 1.55em;
       margin: 15px 0 8px 0;
-      color: $gray-100;
     }
 
+    h3 a{
+      color: $gray-100;
+    }
+    
     h4{
       color: $gray-100;
     }
@@ -489,7 +492,6 @@ footer {
   }
 
   #love::before {
-    background-image: url('../public/icons/heart-solid.svg');
     background-size: 20px 20px;
     content: '';
     display: inline-block;

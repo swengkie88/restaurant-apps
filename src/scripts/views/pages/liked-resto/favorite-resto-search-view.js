@@ -24,10 +24,10 @@ class FavoriteRestoSearchView {
     this.showFavoriteResto(resto);
   }
 
-  showFavoriteResto(restos = []) {
+  showFavoriteResto(resto = []) {
     let html;
-    if (restos.length) {
-      html = restos.reduce((carry, resto) => carry.concat(createRestoItemView(resto)), '');
+    if (resto.length) {
+      html = resto.reduce((carry, resto_item) => carry.concat(createRestoItemView(resto_item)), '');
     } else {
       html = this._getEmptyRestoTemplate();
     }

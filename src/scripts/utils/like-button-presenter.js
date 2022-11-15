@@ -1,7 +1,6 @@
-import FavoriteRestoIdb from '../data/resto-favorite-idb';
-import { createLikeButtonView, createLikedButtonView } from '../views/builder/view-builder';
+import { createLikeRestoButtonView, createUnlikeRestoButtonView } from '../views/builder/view-builder';
 
-const LikeButtonInitiator = {
+const LikeButtonPresenter = {
   async init({ likeButtonContainer, resto, favoriteResto }) {
     this._likeButtonContainer = likeButtonContainer;
     this._resto = resto;
@@ -21,29 +20,29 @@ const LikeButtonInitiator = {
   },
 
   async _isRestoExist(id) {
-    const resto = await FavoriteRestoIdb.getResto(id);
+    const resto = await this._favoriteResto.getResto(id);
     return !!resto;
   },
 
   _renderLike() {
-    this._likeButtonContainer.innerHTML = createLikeButtonView();
+    this._likeButtonContainer.innerHTML = createLikeRestoButtonView();
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestoIdb.putResto(this._resto);
+      await this._favoriteResto.putResto(this._resto);
       this._renderButton();
     });
   },
 
   _renderLiked() {
-    this._likeButtonContainer.innerHTML = createLikedButtonView();
+    this._likeButtonContainer.innerHTML = createUnlikeRestoButtonView();
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestoIdb.deleteResto(this._resto.id);
+      await this._favoriteResto.deleteResto(this._resto.id);
       this._renderButton();
     });
   },
 };
 
-export default LikeButtonInitiator;
+export default LikeButtonPresenter;

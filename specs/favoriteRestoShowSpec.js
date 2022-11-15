@@ -1,5 +1,5 @@
-import FavoriteRestoSearchView from '../src/scripts/views/pages/liked-movies/favorite-resto-search-view';
-import FavoriteRestoShowPresenter from '../src/scripts/views/pages/liked-movies/favorite-resto-show-presenter';
+import FavoriteRestoSearchView from '../src/scripts/views/pages/liked-resto/favorite-resto-search-view';
+import FavoriteRestoShowPresenter from '../src/scripts/views/pages/liked-resto/favorite-resto-show-presenter';
 import FavoriteRestoIdb from '../src/scripts/data/resto-favorite-idb';
 
 describe('Showing all favorite resto', () => {
