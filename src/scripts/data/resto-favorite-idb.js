@@ -20,7 +20,7 @@ const FavoriteRestoIdb = {
     return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
   async putResto(resto) {
-    if(!resto.hasOwnProperty('id')){
+    if (!resto.hasOwnProperty('id')) {
       return;
     }
 

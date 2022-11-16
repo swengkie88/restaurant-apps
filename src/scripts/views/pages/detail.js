@@ -41,7 +41,7 @@ const Detail = {
       categoryEl.innerHTML += `<div class='category-chips'>${categoryItem.name}</div>`;
     });
 
-    const customerReviews = resto.customerReviews;
+    const { customerReviews } = resto;
     const customerReviewEl = document.querySelector('#customer-review');
 
     customerReviews.forEach((review) => {

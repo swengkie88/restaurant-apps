@@ -12,7 +12,7 @@ const Favorite = {
   },
   async afterRender() {
     new FavoriteRestoShowPresenter({ view, favoriteResto: FavoriteRestoIdb });
-    new FavoriteRestoSearchPresenter({ view, favoriteResto: FavoriteRestoIdb })
+    new FavoriteRestoSearchPresenter({ view, favoriteResto: FavoriteRestoIdb });
   },
 };
 

@@ -41,8 +41,7 @@ class FavoriteRestoSearchView {
     return `
       <div class="resto-item__not__found resto__not__found">
         Tidak ada resto untuk ditampilkan
-      </div>`
-    ;
+      </div>`;
   }
 }
 

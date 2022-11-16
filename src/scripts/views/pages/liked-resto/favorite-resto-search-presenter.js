@@ -2,7 +2,7 @@ class FavoriteRestoSearchPresenter {
   constructor({ favoriteResto, view }) {
     this._view = view;
     this._listenToSearchRequestByUser();
-    this._favoriteResto = favoriteResto; 
+    this._favoriteResto = favoriteResto;
   }
 
   _listenToSearchRequestByUser() {
@@ -10,7 +10,7 @@ class FavoriteRestoSearchPresenter {
       this._searchResto(latestQuery);
     });
   }
-  
+
   async _searchResto(latestQuery) {
     this._latestQuery = latestQuery.trim();
 
