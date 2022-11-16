@@ -2,8 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -55,7 +55,7 @@ module.exports = {
       },
     },
     minimizer: [
-      "...",
+      '...',
       new ImageMinimizerPlugin({
         minimizer: {
           implementation: ImageMinimizerPlugin.imageminMinify,
@@ -63,24 +63,24 @@ module.exports = {
             // Lossless optimization with custom option
             // Feel free to experiment with options for better result for you
             plugins: [
-              ["mozjpeg", { 
-                quality: 50, 
-                progressive: true 
+              ['mozjpeg', {
+                quality: 50,
+                progressive: true,
               }],
               // Svgo configuration here https://github.com/svg/svgo#configuration
               [
-                "svgo",
+                'svgo',
                 {
                   plugins: [
                     {
-                      name: "preset-default",
+                      name: 'preset-default',
                       params: {
                         overrides: {
                           removeViewBox: false,
                           addAttributesToSVGElement: {
                             params: {
                               attributes: [
-                                { xmlns: "http://www.w3.org/2000/svg" },
+                                { xmlns: 'http://www.w3.org/2000/svg' },
                               ],
                             },
                           },
